@@ -1,0 +1,34 @@
+<!--
+  Generated template for the FloorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>floorPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Welcome to Project Management App</h2>
+
+  <ion-card>
+    <ion-card-header>
+      Floors under the building
+    </ion-card-header>
+  
+    <ion-list>
+      <ion-item *ngFor="let item of arrData;let i=index">
+        <button ion-item (click)='openFloor(index)'>
+          <ion-icon name="home" item-start></ion-icon>
+            {{item.$key}}
+        </button>
+    </ion-item>
+    </ion-list>
+  </ion-card>
+  
+</ion-content>
